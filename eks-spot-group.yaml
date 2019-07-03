@@ -1,0 +1,19 @@
+# An example of ClusterConfig showing nodegroups with mixed instances:
+---
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: cluster-spot
+  region: eu-west-1
+
+nodeGroups:
+  - name: mixed-spot-node-grp
+    minSize: 3
+    maxSize: 9
+    instancesDistribution:
+      maxPrice: 0.192
+      instanceTypes: ["c5.large", "c5d.large", "c5n.large", "m5.large", "m5a.large"] # At least two instance types should be specified
+      onDemandBaseCapacity: 0
+      onDemandPercentageAboveBaseCapacity: 0
+      spotInstancePools: 3

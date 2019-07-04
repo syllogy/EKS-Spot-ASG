@@ -17,3 +17,8 @@ nodeGroups:
       onDemandBaseCapacity: 0
       onDemandPercentageAboveBaseCapacity: 0
       spotInstancePools: 3
+    labels:
+      lifecycle: Ec2Spot
+      myMixedInstanceGroup: clusterAutoScaler
+    taints:
+      spotInstance: "true:PreferNoSchedule"

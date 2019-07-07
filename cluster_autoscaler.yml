@@ -135,7 +135,7 @@ spec:
             - --stderrthreshold=info
             - --cloud-provider=aws
             - --skip-nodes-with-local-storage=false
-            - --nodes=2:8:eksctl-eksworkshop-eksctl-nodegro-NodeInstanceRole-1UEDPMM8Y6K74
+            - --nodes=2:8:eksctl-eks-spot-cluster-nodegroup-mixed-spot-node-grp-NodeGroup-GIUA3CSDDK53
           env:
             - name: AWS_REGION
               value: eu-west-1

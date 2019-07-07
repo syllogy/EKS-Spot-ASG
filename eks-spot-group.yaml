@@ -4,7 +4,7 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: eksworkshop-eksctl
+  name: eks-spot-cluster
   region: eu-west-1
 
 nodeGroups:
